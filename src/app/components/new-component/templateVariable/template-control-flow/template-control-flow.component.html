@@ -1,0 +1,27 @@
+<h2>Control Flow </h2>
+
+                @if(isTrue){
+                <P>RODRIGO</P>
+                <P>RICARDO</P>
+                }@else { É  FALSO }
+                        @if(loadingData$ | async; as data){
+                            <ul>
+                                @for(item of data; track item){
+                                    <li>{{item}}</li>
+                                } @empty{ <p>tá vazio</p>}
+
+                            </ul>
+                        } @else{ <p>Carregando...</p>}
+
+            @switch(switchCondition){
+                @case ('A'){
+                    <p>sua letra é A</p>
+                }
+                @case ('B'){
+                    <p>sua letra é B</p>
+                }
+                @default{
+                    <p>Valor invalido</p>
+                }
+            }
+

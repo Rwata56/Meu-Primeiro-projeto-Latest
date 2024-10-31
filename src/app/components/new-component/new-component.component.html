@@ -1,0 +1,12 @@
+<h2>Class and Style bind</h2>
+<button (click)="sum()">+  </button>
+<button (click)="minus()">-         </button>
+<p [class.background-red]="cont > 10" [class.background-green]="cont <= 10  ">{{ cont }}</p>
+<hr />
+<h3>Two-way binds</h3>
+<input  [(ngModel)]="name" />
+<br>
+     {{name}}
+        <h3>Diretivas de Atributos</h3>
+        <div [ngClass]="{ 'background-red': true }">Classes condicionais</div>
+        <div [ngStyle]="{ color: cont > 10 ? 'red' : 'green', 'font-size': cont > 10 ? '30px' : '20px'  ,}">Estilo dinâmico</div>   
